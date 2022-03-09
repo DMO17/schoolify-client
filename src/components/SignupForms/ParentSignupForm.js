@@ -193,13 +193,12 @@ export const ParentSignupForm = () => {
 					{...register('confirmPassword', { required: true })}
           error={!!errors.confirmPassword}
 				/>
-        	{errors.houseNumber && (<Typography
+        	{!!errors.houseNumber && (<Typography
           variant="subtitle2"
           gutterBottom
           component="div"
           sx={{ color: "#d32f2f" }}
-        >Confirm Password cannot be empty</Typography>)}
-				{errors.confirmPassword && (<Typography variant="subtitle2"
+        >Confirm Password cannot be empty</Typography>) || errors.confirmPassword && (<Typography variant="subtitle2"
           gutterBottom
           component="div"
           sx={{ color: "#d32f2f" }}>{errors?.confirmPassword.message}</Typography>) }
