@@ -11,6 +11,7 @@ import MenuItem from '@mui/material/MenuItem';
 import { useForm } from 'react-hook-form';
 import Button from '@mui/material/Button';
 import Typography from "@mui/material/Typography";
+import { ClassNames } from '@emotion/react';
 
 
 const SIGNUP = gql`
@@ -69,21 +70,6 @@ export const ParentSignupForm = () => {
 		if (data) {
 			navigate('/login', { replace: true });
 		}
-
-		// const ValidateForm = (formErrors) => {
-		// 	return (
-		// 		!!formErrors.firstName ||
-		// 		!!formErrors.lastName ||
-		// 		!!formErrors.phoneNumber ||
-		// 		!!formErrors.personalEmail ||
-		// 		!!formErrors.password ||
-    //     !!formErrors.confirmPassword ||
-		// 		!!formErrors.houseNumber ||
-		// 		!!formErrors.street ||
-		// 		!!formErrors.city ||
-		// 		!!formErrors.postCode
-		// 	);
-		// };
 	};
 
 	return (
@@ -207,12 +193,16 @@ export const ParentSignupForm = () => {
 					{...register('confirmPassword', { required: true })}
           error={!!errors.confirmPassword}
 				/>
-				{errors?.confirmPassword?.message || errors.confirmPassword && (<Typography
+        	{errors.houseNumber && (<Typography
           variant="subtitle2"
           gutterBottom
           component="div"
           sx={{ color: "#d32f2f" }}
-        >Confirm password is required</Typography>)}
+        >Confirm Password cannot be empty</Typography>)}
+				{errors.confirmPassword && (<Typography variant="subtitle2"
+          gutterBottom
+          component="div"
+          sx={{ color: "#d32f2f" }}>{errors?.confirmPassword.message}</Typography>) }
 
 				<TextField
 					margin='normal'
