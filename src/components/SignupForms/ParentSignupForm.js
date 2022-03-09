@@ -11,7 +11,6 @@ import MenuItem from '@mui/material/MenuItem';
 import { useForm } from 'react-hook-form';
 import Button from '@mui/material/Button';
 import Typography from "@mui/material/Typography";
-import { ClassNames } from '@emotion/react';
 
 
 const SIGNUP = gql`
@@ -102,6 +101,7 @@ export const ParentSignupForm = () => {
 					</Select>
 				</FormControl>
 				<TextField
+        required
 					margin='normal'
 					id='firstName'
 					label='First Name'
@@ -120,6 +120,7 @@ export const ParentSignupForm = () => {
         >First name is required</Typography>)}
 
 				<TextField
+        required
 					margin='normal'
 					id='lastName'
 					label='Last Name'
@@ -138,6 +139,7 @@ export const ParentSignupForm = () => {
         >Last name is required</Typography>)}
 
 				<TextField
+        required
 					margin='normal'
 					id='personalEmail'
 					label='Personal Email'
@@ -159,6 +161,7 @@ export const ParentSignupForm = () => {
         >Please enter a valid email</Typography>)}
 
 				<TextField
+        required
 					margin='normal'
 					id='password'
 					label='Password'
@@ -182,6 +185,7 @@ export const ParentSignupForm = () => {
         >Password must be 8 characters, and include both lower and uppercase characters, with 1 special character required</Typography>)}
 
 				<TextField
+        required
 					margin='normal'
 					id='confirmPassword'
 					label='Confirm Password'
@@ -204,6 +208,7 @@ export const ParentSignupForm = () => {
           sx={{ color: "#d32f2f" }}>{errors?.confirmPassword.message}</Typography>) }
 
 				<TextField
+        required
 					margin='normal'
 					id='houseNumber'
 					label='House Number'
@@ -220,7 +225,9 @@ export const ParentSignupForm = () => {
           component="div"
           sx={{ color: "#d32f2f" }}
         >Please enter your house number</Typography>)}
+
 				<TextField
+        required
 					margin='normal'
 					id='street'
 					label='Street Name'
@@ -237,7 +244,9 @@ export const ParentSignupForm = () => {
           component="div"
           sx={{ color: "#d32f2f" }}
         >Please enter your street name</Typography>)}
+
 				<TextField
+        required
 					margin='normal'
 					id='city'
 					label='City'
@@ -255,6 +264,7 @@ export const ParentSignupForm = () => {
           sx={{ color: "#d32f2f" }}
         >Please enter your city</Typography>)}
 				<TextField
+        required
 					margin='normal'
 					id='postCode'
 					label='Post Code'
@@ -273,6 +283,7 @@ export const ParentSignupForm = () => {
         >Please enter a valid post code</Typography>)}
 
 				<TextField
+        required
 					margin='normal'
 					id='phoneNumber'
 					label='Phone Number'
