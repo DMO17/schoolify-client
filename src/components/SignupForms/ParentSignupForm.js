@@ -13,6 +13,7 @@ import Button from '@mui/material/Button';
 import Typography from "@mui/material/Typography";
 
 
+
 const SIGNUP = gql`
 	mutation Mutation($input: SignupInput) {
 		parentSignUp(input: $input) {
@@ -177,6 +178,7 @@ export const ParentSignupForm = () => {
 					})}
           error={!!errors.password}
 				/>
+
 				{errors.password && (<Typography
           variant="subtitle2"
           gutterBottom
@@ -191,7 +193,7 @@ export const ParentSignupForm = () => {
 					label='Confirm Password'
 					variant='outlined'
 					name='confirmPassword'
-					type='confirmPassword'
+					type='password'
 					autoFocus
 					fullWidth
 					{...register('confirmPassword', { required: true })}
