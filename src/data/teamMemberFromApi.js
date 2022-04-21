@@ -27,7 +27,7 @@ export const teamMemberFromApi = [
       " Full Stack Web Developer studying at University of Birmingham",
     linkedIn: "https://www.linkedin.com/in/leanne-gallagher/",
     github: "https://github.com/lenny-g",
-    portfolio: "https://lenny-g.github.io/portfolio/",
+    portfolio: "https://lenny-g.github.io/react-portfolio/",
   },
   {
     id: 4,
