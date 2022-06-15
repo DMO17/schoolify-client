@@ -1,6 +1,7 @@
 ![Schoolify](./src/assets/img/homeImg.png)
 
-You can view the deployed application [here]([https://crush-app-2022.herokuapp.com/](https://schoolify2022.herokuapp.com/)).
+You can view the deployed application
+https://schoolify2022.herokuapp.com/
 
 ## Table of Contents
 
