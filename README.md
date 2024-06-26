@@ -1,7 +1,7 @@
 ![Schoolify](./src/assets/img/homeImg.png)
 
 You can view the deployed application
-https://schoolify.onrender.com/quiz
+https://schoolify.onrender.com
 
 ## Table of Contents
 
