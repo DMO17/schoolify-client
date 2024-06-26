@@ -1,7 +1,7 @@
 ![Schoolify](./src/assets/img/homeImg.png)
 
 You can view the deployed application
-https://schoolify2022.herokuapp.com/
+https://schoolify.onrender.com/quiz
 
 ## Table of Contents
 
